@@ -20,7 +20,7 @@ fi
 
 
 START_SCRIPT="$INSTALL_BASE/startsample.sh"
-CMAKE_PLATFORM_SPECIFIC=(-DSENSORY_KEY_WORD_DETECTOR=ON \
+CMAKE_PLATFORM_SPECIFIC=(-DSENSORY_KEY_WORD_DETECTOR=OFF \
     -DGSTREAMER_MEDIA_PLAYER=ON -DPORTAUDIO=ON \
     -DPORTAUDIO_LIB_PATH="$THIRD_PARTY_PATH/portaudio/lib/.libs/libportaudio.$LIB_SUFFIX" \
     -DPORTAUDIO_INCLUDE_DIR="$THIRD_PARTY_PATH/portaudio/include" \
@@ -37,7 +37,7 @@ install_dependencies() {
 
 run_os_specifics() {
   build_port_audio
-  build_kwd_engine
+#   build_kwd_engine
 }
 
 build_kwd_engine() {
